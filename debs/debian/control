@@ -1,0 +1,17 @@
+Source: json-smart
+Section: java
+Priority: optional
+Maintainer: Debian Java Maintainers <pkg-java-maintainers@lists.alioth.debian.org>
+Uploaders: Yadickson Soto <yadickson@gmail.com>
+Build-Depends: debhelper (>= 9), cdbs, default-jdk, maven-debian-helper (>= 1.5)
+Standards-Version: 3.9.6
+Homepage: https://github.com/netplex/json-smart-v1
+
+Package: libjson-smart-java
+Architecture: all
+Depends: ${misc:Depends}, ${maven:Depends}
+Suggests: ${maven:OptionalDepends}
+Description: JSON Small and Fast Parser
+ Json-smart is a performance focused, JSON processor library. The API
+ is similar to json-simple but the performance is improved (at least
+ twice faster).

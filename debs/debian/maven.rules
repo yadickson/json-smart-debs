@@ -1,0 +1,2 @@
+
+net.minidev json-smart jar s/.*/debian/ * *
