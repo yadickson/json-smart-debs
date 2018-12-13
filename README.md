@@ -35,6 +35,7 @@ $ fakeroot debian/rules clean binary
 **Tested**
 
 - Debian wheezy
+- Debian jessie
 
 **Repositories**
 
@@ -58,6 +59,6 @@ GPL-3.0 © [Yadickson Soto](https://github.com/yadickson)
 
 Apache-2.0 © [netplex](https://github.com/netplex/json-smart-v1)
 
-[travis-image]: https://api.travis-ci.org/yadickson/json-smart-debs.svg?branch=wheezy
+[travis-image]: https://api.travis-ci.org/yadickson/json-smart-debs.svg?branch=jessie
 [travis-url]: https://travis-ci.org/yadickson/json-smart-debs
 
