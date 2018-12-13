@@ -1,11 +1,11 @@
-json-smart (1.3.2+git20151023~51e1641-1) unstable; urgency=medium
+json-smart (1.3.2+git20151023~51e1641-2) wheezy; urgency=medium
 
-  * New upstream version.
+  * New release.
 
- -- Yadickson Soto <yadickson@gmail.com>  Tue, 26 Apr 2016 15:47:02 -0300
+ -- Yadickson Soto <yadickson@gmail.com>  Thu, 13 Dec 2018 10:47:59 -0300
 
-json-smart (1.2-1) unstable; urgency=medium
+json-smart (1.3.2-1) unstable; urgency=medium
 
-  * Initial release (Closes: #819635)
+  * Initial release.
 
  -- Emmanuel Bourg <ebourg@apache.org>  Thu, 31 Mar 2016 13:21:52 +0200
