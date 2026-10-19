@@ -218,7 +218,8 @@ jobs:
           source-dir: ./
           buildpackage-opts: --build=binary --no-sign
           before-build-hook: |
-            sed -i "s/debhelper (>= 9)/debhelper-compat (= 10)/g" debian/control
+            sed -i "s/debhelper (>= 9)/debhelper (>= 10)/g" debian/control
+            sed -i "s/, cdbs//g" debian/control
             echo "10" > debian/compat
             sed -i "s/include.*debhelper.*/%:/g" debian/rules
             sed -i "s/include.*maven.*/\tdh \$@ --with maven-debian-helper/g" debian/rules
