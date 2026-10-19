@@ -23,6 +23,7 @@ jobs:
             deb [trusted=yes] http://archive.debian.org/debian/ ${{ matrix.codename }} main contrib
             deb [trusted=yes] http://archive.debian.org/debian-security/ ${{ matrix.codename }}/updates main
           before-build-hook: |
+            mkdir -p /usr/share/man/man1
             debian/rules get-orig-source
             debian/rules publish-source
             debchange --controlmaint --local="+ci${{ github.run_id }}~${{ matrix.codename }}~git$(git rev-parse --short HEAD)" "CI build on ${{ matrix.codename }}"
@@ -50,6 +51,7 @@ jobs:
             deb [trusted=yes] http://archive.debian.org/debian/ ${{ matrix.codename }} main contrib
             deb [trusted=yes] http://archive.debian.org/debian-security/ ${{ matrix.codename }}/updates main
           before-build-hook: |
+            mkdir -p /usr/share/man/man1
             debian/rules get-orig-source
             debian/rules publish-source
             debchange --controlmaint --local="+ci${{ github.run_id }}~${{ matrix.codename }}~git$(git rev-parse --short HEAD)" "CI build on ${{ matrix.codename }}"
