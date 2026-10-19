@@ -176,8 +176,10 @@ jobs:
           source-dir: ./
           buildpackage-opts: --build=binary --no-sign
           before-build-hook: |
+            sed -i "s/debhelper (>= 9)/debhelper-compat (= 10)/g" debian/control
+            echo "10" > debian/compat
             sed -i "s/include.*debhelper.*/%:/g" debian/rules
-            sed -i "s/include.*maven.*/\tdh $@ --with maven-debian-helper/g" debian/rules
+            sed -i "s/include.*maven.*/\tdh \$@ --with maven-debian-helper/g" debian/rules
             sed -i "s/JAVA_HOME.*//g" debian/rules
             debian/rules get-orig-source
             debian/rules publish-source
@@ -205,8 +207,10 @@ jobs:
           source-dir: ./
           buildpackage-opts: --build=binary --no-sign
           before-build-hook: |
+            sed -i "s/debhelper (>= 9)/debhelper-compat (= 10)/g" debian/control
+            echo "10" > debian/compat
             sed -i "s/include.*debhelper.*/%:/g" debian/rules
-            sed -i "s/include.*maven.*/\tdh $@ --with maven-debian-helper/g" debian/rules
+            sed -i "s/include.*maven.*/\tdh \$@ --with maven-debian-helper/g" debian/rules
             sed -i "s/JAVA_HOME.*//g" debian/rules
             debian/rules get-orig-source
             debian/rules publish-source
